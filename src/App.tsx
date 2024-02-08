@@ -6,21 +6,8 @@ import {
 } from "react-router-dom";
 
 import { Home } from "./Home";
-
-const Setup = () => {
-    return (
-        <h3>Setup</h3>
-    );
-};
-
-const Play = () => {
-    return (
-        <>
-            <h3>Play</h3>
-            <p>are you ready for it??</p>
-        </>
-    );
-};
+import { Setup } from "./Setup";
+import { Play } from "./Play";
 
 const App = () => {
 
