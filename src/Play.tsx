@@ -8,7 +8,7 @@ export const Play = () => {
             <h3>Play</h3>
             <button
                 className="btn btn-link"
-                onClick={() => nav('/')}
+                onClick={() => true ? nav(-2): nav('/')}
             >
                 donee
             </button>
