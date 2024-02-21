@@ -191,6 +191,7 @@ export type SwiftballBallot = {
 
 export type LeaderboardEntry = {
     player: string;
+    ballots: number;
     overall_accuracy: number;
     lover_accuracy: number;
     fearless_accuracy: number;

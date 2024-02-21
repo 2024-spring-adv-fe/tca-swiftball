@@ -7,11 +7,7 @@ export const getPreviousPlayers = (results: SwiftballBallot[]) => {
         x => x.player
     );
 
-    return [
-        ...new Set(players)
-    ].sort(
-        (a, b) => a.localeCompare(b)
-    );
+    return [...new Set(players)]
 
 };
 
@@ -19,13 +15,28 @@ export const getLeaderboard = (ballot: SwiftballBallot[]): LeaderboardEntry[] =>
 
     const players:string[] = getPreviousPlayers(ballot);
 
-    return players.map(
+    const leaderboard = players.map(
         x => getLeaderboardEntryForPlayer(ballot, x)
     );
+
+    return leaderboard.sort((a, b) => {
+        if (b.overall_accuracy !== a.overall_accuracy) {
+            return b.overall_accuracy - a.overall_accuracy;
+        } else if (b.ballots !== a.ballots) {
+            return b.ballots - a.ballots;
+        } else {
+            return a.player.localeCompare(b.player);
+        }
+    });
 };
 
-export const getLeaderboardEntryForPlayer = (ballot: SwiftballBallot[], player: string): LeaderboardEntry => {
+export const getLeaderboardEntryForPlayer = (ballots: SwiftballBallot[], player: string): LeaderboardEntry => {
 
+    const ballot = ballots.filter(
+        b => b.player === player
+    );
+
+    const ballotsPlayed = ballot.length;
     const loverAccuracy: number = calcLoverAccuracy(ballot);
     const fearlessAccuracy: number = calcFearlessAccuracy(ballot);
     const evermoreAccuracy: number = calcEvermoreAccuracy(ballot);
@@ -41,6 +52,7 @@ export const getLeaderboardEntryForPlayer = (ballot: SwiftballBallot[], player: 
 
     return {
         player: player,
+        ballots: ballotsPlayed,
         overall_accuracy: overallAccuracy,
         lover_accuracy: loverAccuracy,
         fearless_accuracy: fearlessAccuracy,
