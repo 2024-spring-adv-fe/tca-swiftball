@@ -1,163 +1,178 @@
 // LOVER
-type lover_bodysuit =
-    "pink and blue" |
-    "blue and gold" |
-    "barbie pink" |
-    "new bodysuit"
+enum LoverBodysuit {
+    pink_and_blue,
+    blue_and_gold,
+    barbie_pink,
+    new_bodysuit
+}
 
-type the_man_jacket =
-    "black" |
-    "silver" |
-    "purple-ish" |
-    "barbie jacket" |
-    "new jacket"
+enum TheManJacket {
+    black,
+    silver,
+    purpleish,
+    barbie,
+    new_jacket
+}
 
-type lover_guitar =
-    "pink" |
-    "blue"
+enum LoverGuitar {
+    pink,
+    blue
+}
 
 // FEARLESS
-type fearless_dress =
-    "fringe" |
-    "gold noodle" |
-    "silver noodle" |
-    "new dress"
+enum FearlessDress {
+    fringe,
+    gold_noodle,
+    silver_noodle,
+    new_dress
+}
 
 // EVERMORE
-type evermore_dress =
-    "orange with flowers" |
-    "bronze" |
-    "new dress"
+enum EvermoreDress {
+    orange_with_flowers,
+    bronze,
+    new_dress
+}
 
-type champagne_problems_cheer =
-    "< 1 minute" |
-    "> 1, < 2 minutes" |
-    "> 2, < 3 minutes" |
-    "> 3 minutes" |
-    "record breaker"
+enum ChampagneProblemsCheer {
+    less_than_1_minute,
+    greater_than_1_less_than_2_minutes,
+    greater_than_2_less_than_3_minutes,
+    greater_than_3_minutes,
+    record_breaker
+}
 
 // REPUTATION
-type reputation =
-    "black and red snake jumpsuit" |
-    "new jumpsuit"
+enum Reputation {
+    black_and_red_snake_jumpsuit,
+    new_jumpsuit
+}
 
 // SPEAK NOW
-type speak_now_dress =
-    "pink ball gown" |
-    "champange gown" |
-    "tissue flower gown" |
-    "silver gown" |
-    "cupcake wrapper gown" |
-    "elsa gown" |
-    "new dress"
+enum SpeakNowDress {
+    pink_ball_gown,
+    champange_gown,
+    tissue_flower_gown,
+    silver_gown,
+    cupcake_wrapper_gown,
+    elsa_gown,
+    new_dress
+}
 
 // RED
-type tt_shirt =
-    "we are never ever getting back together" |
-    "who's taylor swift anyway?" |
-    "a lot going on at the moment" |
-    "new shirt"
+enum TwentyTwoShirt {
+    we_are_never_ever_getting_back_together,
+    whos_taylor_swift_anyway,
+    a_lot_going_on_at_the_moment,
+    new_shirt
+}
 
 // FOLKLORE
-type folklore_dress =
-    "purple" |
-    "cream" |
-    "pink lace" |
-    "green" |
-    "blue fairy" |
-    "new dress"
+enum FolkloreDress {
+    purple,
+    cream,
+    pink_lace,
+    green,
+    blue_fairy,
+    new_dress
+}
 
 // 1989
-type nnen_set =
-    "aquamarine green" |
-    "sunrise boulevard orange" |
-    "rose garden pink" |
-    "crystal skies blue" |
-    "new set"
+enum NineteenEightyNineSet {
+    aquamarine_green,
+    sunrise_boulevard_orange,
+    rose_garden_pink,
+    crystal_skies_blue,
+    new_set
+}
 
 // SURPRISE SONGS
-type albums =
-    "debut" |
-    "fearless" |
-    "speak now" |
-    "red" |
-    "1989" |
-    "reputation" |
-    "lover" |
-    "folklore" |
-    "evermore" |
-    "midnights" |
-    "non-album single"
+enum Albums {
+    debut,
+    fearless,
+    speak_now,
+    red,
+    nineteen_eighty_nine,
+    reputation,
+    lover,
+    folklore,
+    evermore,
+    midnights,
+    non_album_single
+}
 
 // MIDNIGHTS
-type midnights_tshirt_dress =
-    "light blue" |
-    "pink" |
-    "purple" |
-    "silver sequin" |
-    "elusive blue/purple/pink" |
-    "new dress"
+enum MidnightsTshirtDress {
+    light_blue,
+    pink,
+    purple,
+    silver_sequin,
+    elusive_blue_purple_pink,
+    new_dress
+}
 
-type midnight_rain_bodysuit =
-    "navy starbust pattern" |
-    "blurple scallop pattern" |
-    "rorshach cutout" |
-    "new bodysuit"
+enum MidnightRainBodysuit {
+    navy_starbust_pattern,
+    blurple_scallop_pattern,
+    rorshach_cutout,
+    new_bodysuit
+}
 
-type karma_jacket =
-    "link pink" |
-    "multicolor" |
-    "magenta/red" |
-    "blue" |
-    "no jacket" |
-    "new jacket"
+enum KarmaJacket {
+    link_pink,
+    multicolor,
+    magenta_red,
+    blue,
+    no_jacket,
+    new_jacket
+}
 
 type Swiftball = {
     Lover: {
-        lover_bodysuit: lover_bodysuit,
-        the_man_jacket: the_man_jacket,
-        lover_guitar: lover_guitar,
+        lover_bodysuit: LoverBodysuit,
+        the_man_jacket: TheManJacket,
+        lover_guitar: LoverGuitar,
     },
     Fearless: {
-        fearless_dress: fearless_dress
+        fearless_dress: FearlessDress
     },
-    evermore: {
-        evermore_dress: evermore_dress,
-        champagne_problems_cheer: champagne_problems_cheer
+    Evermore: {
+        evermore_dress: EvermoreDress,
+        champagne_problems_cheer: ChampagneProblemsCheer
     },
-    reputation: {
-        reputation: reputation
+    Reputation: {
+        reputation: Reputation
     },
     Speak_Now: {
-        speak_now_dress: speak_now_dress
+        speak_now_dress: SpeakNowDress
     },
     Red: {
-        tt_shirt: tt_shirt
+        tt_shirt: TwentyTwoShirt
     },
-    folklore: {
-        folklore_dress: folklore_dress
+    Folklore: {
+        folklore_dress: FolkloreDress
     },
-    "1989": {
-        "1989_set": nnen_set
+    NineteenEightyNine: {
+        nineteen_eighty_nine_set: NineteenEightyNineSet
     },
-    surprise: {
+    Surprise: {
         guitar: {
             speech: boolean,
-            album: albums,
+            album: Albums,
             song: string
         },
         piano: {
             speech: boolean,
-            album: albums,
+            album: Albums,
             song: string
         },
     },
-    midnights: {
-        midnights_tshirt_dress: midnights_tshirt_dress,
-        midnight_rain_bodysuit: midnight_rain_bodysuit,
-        karma_jacket: karma_jacket
+    Midnights: {
+        midnights_tshirt_dress: MidnightsTshirtDress,
+        midnight_rain_bodysuit: MidnightRainBodysuit,
+        karma_jacket: KarmaJacket
     },
-    misc: {
+    Misc: {
         special_guest: boolean,
         unhinged: boolean
     }
@@ -165,8 +180,8 @@ type Swiftball = {
 
 export type SwiftballBallot = {
     player: string;
-    guesses: Swiftball
-    answers: Swiftball
+    guesses: Swiftball;
+    answers: Swiftball;
 };
 
 export type LeaderboardEntry = {
@@ -179,7 +194,7 @@ export type LeaderboardEntry = {
     speak_now_accuracy: number;
     red_accuracy: number;
     folklore_accuracy: number;
-    "1989_accuracy": number;
+    nineteen_eighty_nine_accuracy: number;
     surprise_accuracy: number;
     midnights_accuracy: number;
 };
