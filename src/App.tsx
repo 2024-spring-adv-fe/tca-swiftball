@@ -8,7 +8,7 @@ import {
 import { Home } from "./Home";
 import { Setup } from "./Setup";
 import { Play } from "./Play";
-import {SwiftballBallot} from "./SwiftballDefinition";
+import { SwiftballBallot } from "./SwiftballDefinition";
 
 const dummySwiftballBallots: SwiftballBallot[] = [];
 
