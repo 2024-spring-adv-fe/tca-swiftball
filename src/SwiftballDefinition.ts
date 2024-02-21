@@ -131,7 +131,7 @@ type Swiftball = {
     Lover: {
         lover_bodysuit: LoverBodysuit,
         the_man_jacket: TheManJacket,
-        lover_guitar: LoverGuitar,
+        lover_guitar: LoverGuitar
     },
     Fearless: {
         fearless_dress: FearlessDress
@@ -165,7 +165,7 @@ type Swiftball = {
             speech: boolean,
             album: Albums,
             song: string
-        },
+        }
     },
     Midnights: {
         midnights_tshirt_dress: MidnightsTshirtDress,
