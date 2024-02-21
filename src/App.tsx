@@ -10,26 +10,7 @@ import { Setup } from "./Setup";
 import { Play } from "./Play";
 import {SwiftballBallot} from "./SwiftballDefinition";
 
-const dummySwiftballBallots: SwiftballBallot[] = [
-    {
-        player: "Tom"
-        , guesses: [
-            "pink"
-            , "green"
-            , "blue"
-            , "purple"
-        ]
-    }
-    , {
-        player: "John"
-        , guesses: [
-            "gold"
-            , "green"
-            , "green"
-            , "pink"
-        ]
-    }
-];
+const dummySwiftballBallots: SwiftballBallot[] = [];
 
 const App = () => {
 
