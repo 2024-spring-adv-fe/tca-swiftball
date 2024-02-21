@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import {
     createBrowserRouter,
@@ -6,32 +6,20 @@ import {
 } from "react-router-dom";
 
 import { Home } from "./Home";
+import { Leaderboard } from "./Leaderboard";
 import { Setup } from "./Setup";
 import { Play } from "./Play";
-import {SwiftballBallot} from "./SwiftballDefinition";
 
-const dummySwiftballBallots: SwiftballBallot[] = [
-    {
-        player: "Tom"
-        , guesses: [
-            "pink"
-            , "green"
-            , "blue"
-            , "purple"
-        ]
-    }
-    , {
-        player: "John"
-        , guesses: [
-            "gold"
-            , "green"
-            , "green"
-            , "pink"
-        ]
-    }
-];
+import { SwiftballBallot } from "./SwiftballDefinition";
+import { getLeaderboard } from "./SwiftballScore";
+import dummyData from "./dummyBallots.json";
+
+const dummyBallots: SwiftballBallot[] = dummyData as SwiftballBallot[];
 
 const App = () => {
+
+    const [ballots, setBallots] = useState<SwiftballBallot[]>(dummyBallots);
+    const addNewBallot = (ballot: SwiftballBallot) => setBallots([...ballots, ballot]);
 
     const router = createBrowserRouter([
         {
@@ -39,12 +27,16 @@ const App = () => {
             element: <Home />,
         },
         {
+            path: "/leaderboard",
+            element: <Leaderboard leaderboardData={getLeaderboard(ballots)} />,
+        },
+        {
             path: "/setup",
             element: <Setup />,
         },
 {
             path: "/play",
-            element: <Play />,
+            element: <Play addNewBallot={addNewBallot} />,
         },
     ]);
 

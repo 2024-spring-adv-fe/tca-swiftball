@@ -1,6 +1,16 @@
 import { useNavigate } from 'react-router-dom';
+import { SwiftballBallot } from './SwiftballDefinition';
+import { FC } from 'react';
 
-export const Play = () => {
+import newDummyBallot from "./newDummyBallot.json";
+const dummyBallot: SwiftballBallot = newDummyBallot as SwiftballBallot;
+
+interface PlayProps {
+    addNewBallot: (ballot: SwiftballBallot) => void;
+}
+
+export const Play: FC<PlayProps> = ({ addNewBallot }) => {
+
     const nav = useNavigate();
 
     return (
@@ -8,7 +18,10 @@ export const Play = () => {
             <h3>Play</h3>
             <button
                 className="btn btn-link"
-                onClick={() => true ? nav(-2): nav('/')}
+                onClick={() => {
+                    addNewBallot(dummyBallot);
+                    nav(-2);
+                }}
             >
                 donee
             </button>

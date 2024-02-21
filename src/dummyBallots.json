@@ -1,0 +1,314 @@
+[
+  {
+    "player": "Betty",
+    "guesses": {
+      "Lover": {
+        "lover_bodysuit": 1,
+        "the_man_jacket": 2,
+        "lover_guitar": 1
+      },
+      "Fearless": {
+        "fearless_dress": 0
+      },
+      "Evermore": {
+        "evermore_dress": 0,
+        "champagne_problems_cheer": 0
+      },
+      "Reputation": {
+        "reputation": 0
+      },
+      "Speak_Now": {
+        "speak_now_dress": 0
+      },
+      "Red": {
+        "tt_shirt": 0
+      },
+      "Folklore": {
+        "folklore_dress": 1
+      },
+      "NineteenEightyNine": {
+        "nineteen_eighty_nine_set": 0
+      },
+      "Surprise": {
+        "guitar": {
+          "speech": false,
+          "album": 0,
+          "song": "Test"
+        },
+        "piano": {
+          "speech": false,
+          "album": 0,
+          "song": "test2"
+        }
+      },
+      "Midnights": {
+        "midnights_tshirt_dress": 0,
+        "midnight_rain_bodysuit": 0,
+        "karma_jacket": 0
+      },
+      "Misc": {
+        "special_guest": false,
+        "unhinged": false
+      }
+    },
+    "answers": {
+      "Lover": {
+        "lover_bodysuit": 0,
+        "the_man_jacket": 0,
+        "lover_guitar": 0
+      },
+      "Fearless": {
+        "fearless_dress": 0
+      },
+      "Evermore": {
+        "evermore_dress": 0,
+        "champagne_problems_cheer": 0
+      },
+      "Reputation": {
+        "reputation": 0
+      },
+      "Speak_Now": {
+        "speak_now_dress": 0
+      },
+      "Red": {
+        "tt_shirt": 0
+      },
+      "Folklore": {
+        "folklore_dress": 0
+      },
+      "NineteenEightyNine": {
+        "nineteen_eighty_nine_set": 0
+      },
+      "Surprise": {
+        "guitar": {
+          "speech": true,
+          "album": 1,
+          "song": "Jump Then Fall"
+        },
+        "piano": {
+          "speech": false,
+          "album": 3,
+          "song": "State of Grace"
+        }
+      },
+      "Midnights": {
+        "midnights_tshirt_dress": 0,
+        "midnight_rain_bodysuit": 0,
+        "karma_jacket": 0
+      },
+      "Misc": {
+        "special_guest": false,
+        "unhinged": false
+      }
+    },
+    "ballot_version": 1
+  },
+  {
+    "player": "James",
+    "guesses": {
+      "Lover": {
+        "lover_bodysuit": 0,
+        "the_man_jacket": 0,
+        "lover_guitar": 0
+      },
+      "Fearless": {
+        "fearless_dress": 0
+      },
+      "Evermore": {
+        "evermore_dress": 0,
+        "champagne_problems_cheer": 0
+      },
+      "Reputation": {
+        "reputation": 0
+      },
+      "Speak_Now": {
+        "speak_now_dress": 0
+      },
+      "Red": {
+        "tt_shirt": 0
+      },
+      "Folklore": {
+        "folklore_dress": 0
+      },
+      "NineteenEightyNine": {
+        "nineteen_eighty_nine_set": 0
+      },
+      "Surprise": {
+        "guitar": {
+          "speech": true,
+          "album": 0,
+          "song": "Test"
+        },
+        "piano": {
+          "speech": false,
+          "album": 0,
+          "song": "test2"
+        }
+      },
+      "Midnights": {
+        "midnights_tshirt_dress": 0,
+        "midnight_rain_bodysuit": 0,
+        "karma_jacket": 0
+      },
+      "Misc": {
+        "special_guest": false,
+        "unhinged": false
+      }
+    },
+    "answers": {
+      "Lover": {
+        "lover_bodysuit": 0,
+        "the_man_jacket": 0,
+        "lover_guitar": 0
+      },
+      "Fearless": {
+        "fearless_dress": 0
+      },
+      "Evermore": {
+        "evermore_dress": 0,
+        "champagne_problems_cheer": 0
+      },
+      "Reputation": {
+        "reputation": 0
+      },
+      "Speak_Now": {
+        "speak_now_dress": 0
+      },
+      "Red": {
+        "tt_shirt": 0
+      },
+      "Folklore": {
+        "folklore_dress": 0
+      },
+      "NineteenEightyNine": {
+        "nineteen_eighty_nine_set": 0
+      },
+      "Surprise": {
+        "guitar": {
+          "speech": true,
+          "album": 1,
+          "song": "Jump Then Fall"
+        },
+        "piano": {
+          "speech": false,
+          "album": 3,
+          "song": "State of Grace"
+        }
+      },
+      "Midnights": {
+        "midnights_tshirt_dress": 0,
+        "midnight_rain_bodysuit": 0,
+        "karma_jacket": 0
+      },
+      "Misc": {
+        "special_guest": false,
+        "unhinged": false
+      }
+    },
+    "ballot_version": 1
+  },
+  {
+    "player": "Betty",
+    "guesses": {
+      "Lover": {
+        "lover_bodysuit": 1,
+        "the_man_jacket": 2,
+        "lover_guitar": 1
+      },
+      "Fearless": {
+        "fearless_dress": 0
+      },
+      "Evermore": {
+        "evermore_dress": 0,
+        "champagne_problems_cheer": 0
+      },
+      "Reputation": {
+        "reputation": 0
+      },
+      "Speak_Now": {
+        "speak_now_dress": 0
+      },
+      "Red": {
+        "tt_shirt": 0
+      },
+      "Folklore": {
+        "folklore_dress": 0
+      },
+      "NineteenEightyNine": {
+        "nineteen_eighty_nine_set": 0
+      },
+      "Surprise": {
+        "guitar": {
+          "speech": false,
+          "album": 0,
+          "song": "Test"
+        },
+        "piano": {
+          "speech": false,
+          "album": 0,
+          "song": "test2"
+        }
+      },
+      "Midnights": {
+        "midnights_tshirt_dress": 0,
+        "midnight_rain_bodysuit": 0,
+        "karma_jacket": 0
+      },
+      "Misc": {
+        "special_guest": true,
+        "unhinged": true
+      }
+    },
+    "answers": {
+      "Lover": {
+        "lover_bodysuit": 0,
+        "the_man_jacket": 0,
+        "lover_guitar": 0
+      },
+      "Fearless": {
+        "fearless_dress": 0
+      },
+      "Evermore": {
+        "evermore_dress": 0,
+        "champagne_problems_cheer": 0
+      },
+      "Reputation": {
+        "reputation": 0
+      },
+      "Speak_Now": {
+        "speak_now_dress": 0
+      },
+      "Red": {
+        "tt_shirt": 0
+      },
+      "Folklore": {
+        "folklore_dress": 0
+      },
+      "NineteenEightyNine": {
+        "nineteen_eighty_nine_set": 0
+      },
+      "Surprise": {
+        "guitar": {
+          "speech": true,
+          "album": 1,
+          "song": "Jump Then Fall"
+        },
+        "piano": {
+          "speech": false,
+          "album": 3,
+          "song": "State of Grace"
+        }
+      },
+      "Midnights": {
+        "midnights_tshirt_dress": 0,
+        "midnight_rain_bodysuit": 0,
+        "karma_jacket": 0
+      },
+      "Misc": {
+        "special_guest": true,
+        "unhinged": true
+      }
+    },
+    "ballot_version": 1
+  }
+]

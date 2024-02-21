@@ -8,10 +8,16 @@ export const Home = () => {
         <>
             <h3>Home</h3>
             <button
-                className="btn btn-secondary"
+                className="btn btn-primary"
                 onClick={() => nav('/setup')}
             >
                 Play
+            </button>
+            <button
+                className="btn btn-secondary"
+                onClick={() => nav('/leaderboard')}
+            >
+                Leaderboard
             </button>
         </>
     );
