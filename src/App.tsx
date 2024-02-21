@@ -10,7 +10,7 @@ import { Setup } from "./Setup";
 import { Play } from "./Play";
 
 import { SwiftballBallot } from "./SwiftballDefinition";
-import { getLeaderboard } from "./SwiftballScore";
+// import { getLeaderboard } from "./SwiftballScore";
 import dummyData from "./dummyBallots.json";
 
 const dummyBallots: SwiftballBallot[] = dummyData as SwiftballBallot[];
