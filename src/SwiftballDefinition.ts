@@ -178,10 +178,15 @@ type Swiftball = {
     }
 }
 
+enum BallotVersion {
+    v1 = 1
+}
+
 export type SwiftballBallot = {
     player: string;
     guesses: Swiftball;
     answers: Swiftball;
+    ballot_version: BallotVersion;
 };
 
 export type LeaderboardEntry = {
