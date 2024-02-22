@@ -17,7 +17,6 @@ export const Home: FC<HomeProps> = ({setTitle}) => {
 
     return (
         <>
-            <h3>Home</h3>
             <button
                 className="btn btn-primary"
                 onClick={() => nav('/setup')}

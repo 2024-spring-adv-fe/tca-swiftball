@@ -17,7 +17,6 @@ export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData, setTitle })
 
     return (
         <>
-            <h3>Leaderboard</h3>
             <button className="btn btn-link" onClick={() => { nav(-1); }}>
                 back home
             </button>

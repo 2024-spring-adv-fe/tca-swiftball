@@ -19,7 +19,6 @@ export const Play: FC<PlayProps> = ({ addNewBallot, setTitle }) => {
 
     return (
         <>
-            <h3>Play</h3>
             <button
                 className="btn btn-link"
                 onClick={() => {

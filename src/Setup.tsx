@@ -14,7 +14,6 @@ export const Setup: FC<SetupProps> = ({ setTitle }) => {
 
     return (
         <>
-            <h3>Setup</h3>
             <button
                 className="btn btn-link"
                 onClick={() => nav('/play')}
