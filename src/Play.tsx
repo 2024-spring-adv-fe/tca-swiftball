@@ -1,15 +1,19 @@
 import { useNavigate } from 'react-router-dom';
 import { SwiftballBallot } from './SwiftballDefinition';
-import { FC } from 'react';
+import {FC, useEffect} from 'react';
 
 import newDummyBallot from "./newDummyBallot.json";
 const dummyBallot: SwiftballBallot = newDummyBallot as SwiftballBallot;
 
 interface PlayProps {
     addNewBallot: (ballot: SwiftballBallot) => void;
+    setTitle: (title: string) => void;
 }
 
-export const Play: FC<PlayProps> = ({ addNewBallot }) => {
+export const Play: FC<PlayProps> = ({ addNewBallot, setTitle }) => {
+    useEffect(
+        () => setTitle("Play")
+    );
 
     const nav = useNavigate();
 
