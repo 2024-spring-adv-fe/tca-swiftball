@@ -18,6 +18,8 @@ const dummyBallots: SwiftballBallot[] = dummyData as SwiftballBallot[];
 
 const App = () => {
 
+    const [title, setTitle] = useState("Swiftball");
+
     const [ballots, setBallots] = useState<SwiftballBallot[]>(dummyBallots);
     const addNewBallot = (ballot: SwiftballBallot) => setBallots([...ballots, ballot]);
 
@@ -42,7 +44,14 @@ const App = () => {
 
     return (
       <div className="App">
-          <RouterProvider router={router} />
+          <div className={"navbar bg-base-300"}>
+              <h1 className={ "text-lg font-semibold" }>
+                  { title }
+              </h1>
+          </div>
+          <div className={"p-3"}>
+              <RouterProvider router={ router } />
+          </div>
       </div>
     );
 }
