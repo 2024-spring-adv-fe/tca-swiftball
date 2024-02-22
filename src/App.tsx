@@ -5,7 +5,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import { Home } from "./Home";
+import { Home, AppTitle } from "./Home";
 import { Leaderboard } from "./Leaderboard";
 import { Setup } from "./Setup";
 import { Play } from "./Play";
@@ -18,31 +18,50 @@ const dummyBallots: SwiftballBallot[] = dummyData as SwiftballBallot[];
 
 const App = () => {
 
+    const [title, setTitle] = useState(AppTitle);
+
     const [ballots, setBallots] = useState<SwiftballBallot[]>(dummyBallots);
     const addNewBallot = (ballot: SwiftballBallot) => setBallots([...ballots, ballot]);
 
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <Home />,
+            element: <Home
+                setTitle={setTitle}
+            />,
         },
         {
             path: "/leaderboard",
-            element: <Leaderboard leaderboardData={getLeaderboard(ballots)} />,
+            element: <Leaderboard
+                leaderboardData={getLeaderboard(ballots)}
+                setTitle={setTitle}
+            />,
         },
         {
             path: "/setup",
-            element: <Setup />,
+            element: <Setup
+                setTitle={setTitle}
+            />,
         },
 {
             path: "/play",
-            element: <Play addNewBallot={addNewBallot} />,
+            element: <Play
+                addNewBallot={addNewBallot}
+                setTitle={setTitle}
+            />,
         },
     ]);
 
     return (
-      <div className="App">
-          <RouterProvider router={router} />
+      <div className="App" data-theme="pastel">
+          <div className={"navbar bg-base-300"}>
+              <h1 className={ "text-lg font-semibold" }>
+                  { title }
+              </h1>
+          </div>
+          <div className={"p-3"}>
+              <RouterProvider router={ router } />
+          </div>
       </div>
     );
 }

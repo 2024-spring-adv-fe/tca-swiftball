@@ -1,18 +1,22 @@
 import { useNavigate } from 'react-router-dom';
-import { LeaderboardEntry } from './SwiftballDefinition';
-import { FC } from 'react';
+import {LeaderboardEntry} from './SwiftballDefinition';
+import {FC, useEffect} from 'react';
 
 interface LeaderboardProps {
     leaderboardData: LeaderboardEntry[];
+    setTitle: (title: string) => void;
 }
 
 
-export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData }) => {
+export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData, setTitle }) => {
+    useEffect(
+        () => setTitle("Leaderboard")
+    );
+
     const nav = useNavigate();
 
     return (
         <>
-            <h3>Leaderboard</h3>
             <button className="btn btn-link" onClick={() => { nav(-1); }}>
                 back home
             </button>
