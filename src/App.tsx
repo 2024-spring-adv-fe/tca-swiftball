@@ -43,7 +43,7 @@ const App = () => {
     ]);
 
     return (
-      <div className="App">
+      <div className="App" data-theme="pastel">
           <div className={"navbar bg-base-300"}>
               <h1 className={ "text-lg font-semibold" }>
                   { title }
