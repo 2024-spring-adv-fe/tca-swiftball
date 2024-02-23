@@ -5,14 +5,14 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import { Home, AppTitle } from "./Home";
-import { Leaderboard } from "./Leaderboard";
-import { Setup } from "./Setup";
-import { Play } from "./Play";
+import { Home, AppTitle } from "./pages/Home";
+import { Leaderboard } from "./pages/Leaderboard";
+import { Setup } from "./pages/Setup";
+import { Play } from "./pages/Play";
 
-import { SwiftballBallot } from "./SwiftballDefinition";
-import { getLeaderboard } from "./SwiftballScore";
-import dummyData from "./dummyBallots.json";
+import { SwiftballBallot } from "./Swiftball/SwiftballDefinition";
+import { getLeaderboard } from "./Swiftball/SwiftballScore";
+import dummyData from "./data/dummyBallots.json";
 
 const dummyBallots: SwiftballBallot[] = dummyData as SwiftballBallot[];
 
