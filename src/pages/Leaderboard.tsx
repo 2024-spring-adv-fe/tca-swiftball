@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import {LeaderboardEntry} from './SwiftballDefinition';
+import {LeaderboardEntry} from '../Swiftball/SwiftballDefinition';
 import {FC, useEffect} from 'react';
 
 interface LeaderboardProps {

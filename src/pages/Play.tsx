@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { SwiftballBallot } from './SwiftballDefinition';
+import { SwiftballBallot } from '../Swiftball/SwiftballDefinition';
 import {FC, useEffect} from 'react';
 
-import newDummyBallot from "./newDummyBallot.json";
+import newDummyBallot from "../data/newDummyBallot.json";
 const dummyBallot: SwiftballBallot = newDummyBallot as SwiftballBallot;
 
 interface PlayProps {
