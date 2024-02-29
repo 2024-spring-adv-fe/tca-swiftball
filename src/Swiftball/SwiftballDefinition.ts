@@ -186,6 +186,7 @@ export type SwiftballBallot = {
     player: string;
     guesses: Swiftball;
     answers: Swiftball;
+    date: string; // ISO 8601
     ballot_version: BallotVersion;
 };
 
