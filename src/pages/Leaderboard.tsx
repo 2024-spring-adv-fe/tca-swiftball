@@ -15,11 +15,15 @@ export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData, setTitle })
 
     const nav = useNavigate();
 
+    const totalBallots = leaderboardData.reduce((acc, b) => acc + b.ballots, 0);
+
     return (
         <>
             <button className="btn btn-link" onClick={() => { nav(-1); }}>
                 back home
             </button>
+
+            <p>Total Ballots: {totalBallots}</p>
             {
                 leaderboardData.length > 0
                     ? (
