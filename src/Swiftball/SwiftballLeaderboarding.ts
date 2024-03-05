@@ -48,10 +48,10 @@ export const getLeaderboard = (ballot: SwiftballBallot[]): LeaderboardEntry[] =>
     );
 
     return leaderboard.sort((a, b) => {
-        if (b.accuracies.overall_accuracy !== a.accuracies.overall_accuracy) {
-            return b.accuracies.overall_accuracy - a.accuracies.overall_accuracy;
-        } else if (b.ballots !== a.ballots) {
-            return b.ballots - a.ballots;
+        if (b.points.average_points !== a.points.average_points) {
+            return b.points.average_points - a.points.average_points;
+        } else if (b.points.total_points !== a.points.total_points) {
+            return b.points.total_points - a.points.total_points;
         } else {
             return a.player.localeCompare(b.player);
         }
