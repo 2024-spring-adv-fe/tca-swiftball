@@ -47,8 +47,8 @@
         "karma_jacket": 0
       },
       "Misc": {
-        "special_guest": false,
-        "unhinged": false
+        "special_guest": true,
+        "unhinged": true
       }
     },
     "answers": {

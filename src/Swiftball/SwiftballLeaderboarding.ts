@@ -11,7 +11,8 @@ import {
     calcFolkloreAccuracy,
     calcNineteenEightyNineAccuracy,
     calcSurpriseAccuracy,
-    calcMidnightsAccuracy
+    calcMidnightsAccuracy,
+    calcMiscAccuracy
 } from "./calc/calcAccuracy";
 
 export const getPreviousPlayers = (results: SwiftballBallot[]) => {
@@ -60,6 +61,7 @@ export const getLeaderboardEntryForPlayer = (ballots: SwiftballBallot[], player:
     const nineteenEightyNineAccuracy:number = calcNineteenEightyNineAccuracy(ballot);
     const surpriseAccuracy:number = calcSurpriseAccuracy(ballot);
     const midnightsAccuracy:number = calcMidnightsAccuracy(ballot);
+    const miscAccuracy:number = calcMiscAccuracy(ballot);
 
     const overallAccuracy: number = (loverAccuracy + fearlessAccuracy + evermoreAccuracy + reputationAccuracy + speakNowAccuracy + redAccuracy + folkloreAccuracy + nineteenEightyNineAccuracy + surpriseAccuracy + midnightsAccuracy) / 10;
 
@@ -78,6 +80,7 @@ export const getLeaderboardEntryForPlayer = (ballots: SwiftballBallot[], player:
             nineteen_eighty_nine_accuracy: nineteenEightyNineAccuracy,
             surprise_accuracy: surpriseAccuracy,
             midnights_accuracy: midnightsAccuracy,
+            misc_accuracy: miscAccuracy
         }
     };
 };

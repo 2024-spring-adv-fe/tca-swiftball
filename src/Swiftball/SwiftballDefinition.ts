@@ -297,6 +297,7 @@ type SwiftballAccuracies = {
     nineteen_eighty_nine_accuracy: number;
     surprise_accuracy: number;
     midnights_accuracy: number;
+    misc_accuracy: number;
 };
 
 export type LeaderboardEntry = {

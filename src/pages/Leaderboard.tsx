@@ -41,7 +41,9 @@ export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData, setTitle })
                                 <th>Red</th>
                                 <th>Folklore</th>
                                 <th>1989</th>
+                                <th>Surprise</th>
                                 <th>Midnights</th>
+                                <th>Misc</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -80,7 +82,13 @@ export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData, setTitle })
                                            {b.accuracies.nineteen_eighty_nine_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
+                                           {b.accuracies.surprise_accuracy.toLocaleString("en", {style: "percent"})}
+                                       </td>
+                                       <td>
                                            {b.accuracies.midnights_accuracy.toLocaleString("en", {style: "percent"})}
+                                       </td>
+                                       <td>
+                                           {b.accuracies.misc_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                    </tr>
                                ))
