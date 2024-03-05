@@ -285,7 +285,12 @@ export type SwiftballBallot = {
     ballot_version: BallotVersion;
 };
 
-type SwiftballAccuracies = {
+type ScorePoints = {
+    total_points: number;
+    average_points: number;
+}
+
+type ScoreAccuracies = {
     overall_accuracy: number;
     lover_accuracy: number;
     fearless_accuracy: number;
@@ -303,5 +308,6 @@ type SwiftballAccuracies = {
 export type LeaderboardEntry = {
     player: string;
     ballots: number;
-    accuracies: SwiftballAccuracies;
+    points: ScorePoints;
+    accuracies: ScoreAccuracies;
 };

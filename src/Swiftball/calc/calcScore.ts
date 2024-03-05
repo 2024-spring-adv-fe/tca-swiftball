@@ -1,7 +1,12 @@
 import { SwiftballBallot } from "../SwiftballDefinition";
 import { SwiftballPoints } from "../SwiftballDefinition";
 
-export const calcLoverScore = (ballot: SwiftballBallot[]):number => {
+interface ScoreReturn {
+    score: number,
+    totalPotentialScore: number
+}
+
+export const calcLoverScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Lover.totalPossiblePoints;
     let score = 0;
 
@@ -19,10 +24,10 @@ export const calcLoverScore = (ballot: SwiftballBallot[]):number => {
         }
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcFearlessScore = (ballot: SwiftballBallot[]):number => {
+export const calcFearlessScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Fearless.totalPossiblePoints;
     let score = 0;
 
@@ -32,10 +37,10 @@ export const calcFearlessScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcEvermoreScore = (ballot: SwiftballBallot[]):number => {
+export const calcEvermoreScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Evermore.totalPossiblePoints;
     let score = 0;
 
@@ -49,10 +54,10 @@ export const calcEvermoreScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcReputationScore = (ballot: SwiftballBallot[]):number => {
+export const calcReputationScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Reputation.totalPossiblePoints;
     let score = 0;
 
@@ -62,10 +67,10 @@ export const calcReputationScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcSpeakNowScore = (ballot: SwiftballBallot[]):number => {
+export const calcSpeakNowScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Speak_Now.totalPossiblePoints;
     let score = 0;
 
@@ -75,10 +80,10 @@ export const calcSpeakNowScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcRedScore = (ballot: SwiftballBallot[]):number => {
+export const calcRedScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Red.totalPossiblePoints;
     let score = 0;
 
@@ -88,10 +93,10 @@ export const calcRedScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcFolkloreScore = (ballot: SwiftballBallot[]):number => {
+export const calcFolkloreScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Folklore.totalPossiblePoints;
     let score = 0;
 
@@ -101,10 +106,10 @@ export const calcFolkloreScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcNineteenEightyNineScore = (ballot: SwiftballBallot[]):number => {
+export const calcNineteenEightyNineScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.NineteenEightyNine.totalPossiblePoints;
     let score = 0;
 
@@ -114,10 +119,10 @@ export const calcNineteenEightyNineScore = (ballot: SwiftballBallot[]):number =>
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcSurpriseScore = (ballot: SwiftballBallot[]):number => {
+export const calcSurpriseScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Surprise.totalPossiblePoints;
     let score = 0;
 
@@ -147,10 +152,10 @@ export const calcSurpriseScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcMidnightsScore = (ballot: SwiftballBallot[]):number => {
+export const calcMidnightsScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Midnights.totalPossiblePoints;
     let score = 0;
 
@@ -168,10 +173,10 @@ export const calcMidnightsScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };
 
-export const calcMiscScore = (ballot: SwiftballBallot[]):number => {
+export const calcMiscScore = (ballot: SwiftballBallot[]):ScoreReturn => {
     const totalPotentialScore = SwiftballPoints.Misc.totalPossiblePoints;
     let score = 0;
 
@@ -185,5 +190,5 @@ export const calcMiscScore = (ballot: SwiftballBallot[]):number => {
         };
     });
 
-    return score;
+    return {score, totalPotentialScore};
 };

@@ -31,19 +31,21 @@ export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData, setTitle })
                             <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Ballots</th>
-                                <th>Overall</th>
-                                <th>Lover</th>
-                                <th>Fearless</th>
-                                <th>Evermore</th>
-                                <th>Reputation</th>
-                                <th>Speak Now</th>
-                                <th>Red</th>
-                                <th>Folklore</th>
-                                <th>1989</th>
-                                <th>Surprise</th>
-                                <th>Midnights</th>
-                                <th>Misc</th>
+                                <th>Ballots Submitted</th>
+                                <th>Total Points</th>
+                                <th>Average Points Per Ballot</th>
+                                <th>Overall Accuracy</th>
+                                <th>Lover Accuracy</th>
+                                <th>Fearless Accuracy</th>
+                                <th>Evermore Accuracy</th>
+                                <th>Reputation Accuracy</th>
+                                <th>Speak Now Accuracy</th>
+                                <th>Red Accuracy</th>
+                                <th>Folklore Accuracy</th>
+                                <th>1989 Accuracy</th>
+                                <th>Surprise Accuracy</th>
+                                <th>Midnights Accuracy</th>
+                                <th>Misc Accuracy</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -53,6 +55,12 @@ export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData, setTitle })
                                        <td>{b.player}</td>
                                        <td>
                                            {b.ballots}
+                                       </td>
+                                       <td>
+                                           {b.points.total_points}
+                                       </td>
+                                       <td>
+                                           {b.points.average_points}
                                        </td>
                                        <td>
                                            {b.accuracies.overall_accuracy.toLocaleString("en", {style: "percent"})}

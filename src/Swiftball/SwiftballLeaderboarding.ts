@@ -2,6 +2,20 @@ import { SwiftballBallot } from "./SwiftballDefinition";
 import { LeaderboardEntry } from "./SwiftballDefinition";
 
 import {
+    calcLoverScore,
+    calcFearlessScore,
+    calcEvermoreScore,
+    calcReputationScore,
+    calcSpeakNowScore,
+    calcRedScore,
+    calcFolkloreScore,
+    calcNineteenEightyNineScore,
+    calcSurpriseScore,
+    calcMidnightsScore,
+    calcMiscScore
+} from "./calc/calcScore";
+
+import {
     calcLoverAccuracy,
     calcFearlessAccuracy,
     calcEvermoreAccuracy,
@@ -51,6 +65,23 @@ export const getLeaderboardEntryForPlayer = (ballots: SwiftballBallot[], player:
     );
 
     const ballotsPlayed = ballot.length;
+    console.log("ballots played:" + ballotsPlayed);
+
+    const loverScoring = calcLoverScore(ballot);
+    const fearlessScoring = calcFearlessScore(ballot);
+    const evermoreScoring = calcEvermoreScore(ballot);
+    const reputationScoring = calcReputationScore(ballot);
+    const speakNowScoring = calcSpeakNowScore(ballot);
+    const redScoring = calcRedScore(ballot);
+    const folkloreScoring = calcFolkloreScore(ballot);
+    const nineteenEightyNineScoring = calcNineteenEightyNineScore(ballot);
+    const surpriseScoring = calcSurpriseScore(ballot);
+    const midnightsScoring = calcMidnightsScore(ballot);
+    const miscScoring = calcMiscScore(ballot);
+    
+    const totalPoints: number = loverScoring.score + fearlessScoring.score + evermoreScoring.score + reputationScoring.score + speakNowScoring.score + redScoring.score + folkloreScoring.score + nineteenEightyNineScoring.score + surpriseScoring.score + midnightsScoring.score + miscScoring.score;
+    const averagePoints: number = totalPoints / ballotsPlayed;
+
     const loverAccuracy: number = calcLoverAccuracy(ballot);
     const fearlessAccuracy: number = calcFearlessAccuracy(ballot);
     const evermoreAccuracy: number = calcEvermoreAccuracy(ballot);
@@ -63,11 +94,15 @@ export const getLeaderboardEntryForPlayer = (ballots: SwiftballBallot[], player:
     const midnightsAccuracy:number = calcMidnightsAccuracy(ballot);
     const miscAccuracy:number = calcMiscAccuracy(ballot);
 
-    const overallAccuracy: number = (loverAccuracy + fearlessAccuracy + evermoreAccuracy + reputationAccuracy + speakNowAccuracy + redAccuracy + folkloreAccuracy + nineteenEightyNineAccuracy + surpriseAccuracy + midnightsAccuracy) / 10;
+    const overallAccuracy: number = (loverAccuracy + fearlessAccuracy + evermoreAccuracy + reputationAccuracy + speakNowAccuracy + redAccuracy + folkloreAccuracy + nineteenEightyNineAccuracy + surpriseAccuracy + midnightsAccuracy + miscAccuracy) / 11;
 
     return {
         player: player,
         ballots: ballotsPlayed,
+        points: {
+            total_points: totalPoints,
+            average_points: averagePoints
+        },
         accuracies: {
             overall_accuracy: overallAccuracy,
             lover_accuracy: loverAccuracy,
