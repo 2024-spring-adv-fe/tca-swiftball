@@ -11,7 +11,7 @@ import { Setup } from "./pages/Setup";
 import { Play } from "./pages/Play";
 
 import { SwiftballBallot } from "./Swiftball/SwiftballDefinition";
-import { getLeaderboard } from "./Swiftball/SwiftballScore";
+import { getLeaderboard } from "./Swiftball/SwiftballLeaderboarding";
 import dummyData from "./data/dummyBallots.json";
 
 const dummyBallots: SwiftballBallot[] = dummyData as SwiftballBallot[];

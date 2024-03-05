@@ -199,3 +199,23 @@ export const calcMidnightsAccuracy = (ballot: SwiftballBallot[]):number => {
 
     return total === 0 ? 0 : correct / total;
 };
+
+export const calcMiscAccuracy = (ballot: SwiftballBallot[]):number => {
+    let correct = 0;
+    let total = 0;
+
+    const guessIsCorrect = () => {
+        correct++;
+        total++;
+    };
+
+    ballot.forEach(ballot => {
+        if (ballot.guesses.Misc.special_guest === ballot.answers.Misc.special_guest) guessIsCorrect();
+        else total++;
+
+        if (ballot.guesses.Misc.unhinged === ballot.answers.Misc.unhinged) guessIsCorrect();
+        else total++;
+    });
+
+    return total === 0 ? 0 : correct / total;
+}

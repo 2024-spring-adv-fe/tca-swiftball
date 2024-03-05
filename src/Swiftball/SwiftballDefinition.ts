@@ -127,33 +127,125 @@ enum KarmaJacket {
     new_jacket
 }
 
+export const SwiftballPoints = {
+    Lover: {
+        totalPossiblePoints : 9,
+        predictions: {
+            lover_bodysuit: 5,
+            the_man_jacket: 2,
+            lover_guitar: 2
+        }
+    },
+    Fearless: {
+        totalPossiblePoints: 5,
+        predictions: {
+            fearless_dress: 5
+        }
+    },
+    Evermore: {
+        totalPossiblePoints: 7,
+        predictions: {
+            evermore_dress: 2,
+            champagne_problems_cheer: 5
+        }
+    },
+    Reputation: {
+        totalPossiblePoints: 13,
+        predictions: {
+            reputation: 13
+        }
+    },
+    Speak_Now: {
+        totalPossiblePoints: 8,
+        predictions: {
+            speak_now_dress: 8
+        }
+    },
+    Red: {
+        totalPossiblePoints: 7,
+        predictions: {
+            tt_shirt: 7
+        }
+    },
+    Folklore: {
+        totalPossiblePoints: 8,
+        predictions: {
+            folklore_dress: 8
+        }
+    },
+    NineteenEightyNine: {
+        totalPossiblePoints: 6,
+        predictions: {
+            nineteen_eighty_nine_set: 6
+        }
+    },
+    Surprise: {
+        totalPossiblePoints: 32,
+        predictions: {
+            guitar: {
+                speech: 2,
+                album: 7,
+                song: 7
+            },
+            piano: {
+                speech: 2,
+                album: 7,
+                song: 7
+            }
+        }
+    },
+    Midnights: {
+        totalPossiblePoints: 8,
+        predictions: {
+            midnights_tshirt_dress: 2,
+            midnight_rain_bodysuit: 3,
+            karma_jacket: 3
+        }
+    },
+    Misc: {
+        totalPossiblePoints: 10,
+        predictions: {
+            special_guest: 5,
+            unhinged: 5
+        }
+    },
+}
+
 type Swiftball = {
     Lover: {
         lover_bodysuit: LoverBodysuit,
         the_man_jacket: TheManJacket,
-        lover_guitar: LoverGuitar
+        lover_guitar: LoverGuitar,
+        points: typeof SwiftballPoints["Lover"]
     },
     Fearless: {
-        fearless_dress: FearlessDress
+        fearless_dress: FearlessDress,
+        points: typeof SwiftballPoints["Fearless"]
     },
     Evermore: {
         evermore_dress: EvermoreDress,
-        champagne_problems_cheer: ChampagneProblemsCheer
+        champagne_problems_cheer: ChampagneProblemsCheer,
+        points: typeof SwiftballPoints["Evermore"]
     },
     Reputation: {
-        reputation: Reputation
+        reputation: Reputation,
+        points: typeof SwiftballPoints["Reputation"]
     },
     Speak_Now: {
-        speak_now_dress: SpeakNowDress
+        speak_now_dress: SpeakNowDress,
+        points: typeof SwiftballPoints["Speak_Now"]
     },
     Red: {
-        tt_shirt: TwentyTwoShirt
+        tt_shirt: TwentyTwoShirt,
+        points: typeof SwiftballPoints["Red"]
     },
     Folklore: {
-        folklore_dress: FolkloreDress
+        folklore_dress: FolkloreDress,
+        points: typeof SwiftballPoints["Folklore"]
     },
     NineteenEightyNine: {
-        nineteen_eighty_nine_set: NineteenEightyNineSet
+        nineteen_eighty_nine_set: NineteenEightyNineSet,
+        points: typeof SwiftballPoints["NineteenEightyNine"]
     },
     Surprise: {
         guitar: {
@@ -165,16 +257,19 @@ type Swiftball = {
             speech: boolean,
             album: Albums,
             song: string
-        }
+        },
+        points: typeof SwiftballPoints["Surprise"]
     },
     Midnights: {
         midnights_tshirt_dress: MidnightsTshirtDress,
         midnight_rain_bodysuit: MidnightRainBodysuit,
-        karma_jacket: KarmaJacket
+        karma_jacket: KarmaJacket,
+        points: typeof SwiftballPoints["Midnights"]
     },
     Misc: {
         special_guest: boolean,
-        unhinged: boolean
+        unhinged: boolean,
+        points: typeof SwiftballPoints["Misc"]
     }
 }
 
@@ -190,9 +285,12 @@ export type SwiftballBallot = {
     ballot_version: BallotVersion;
 };
 
-export type LeaderboardEntry = {
-    player: string;
-    ballots: number;
+type ScorePoints = {
+    total_points: number;
+    average_points: number;
+}
+
+type ScoreAccuracies = {
     overall_accuracy: number;
     lover_accuracy: number;
     fearless_accuracy: number;
@@ -204,4 +302,12 @@ export type LeaderboardEntry = {
     nineteen_eighty_nine_accuracy: number;
     surprise_accuracy: number;
     midnights_accuracy: number;
+    misc_accuracy: number;
+};
+
+export type LeaderboardEntry = {
+    player: string;
+    ballots: number;
+    points: ScorePoints;
+    accuracies: ScoreAccuracies;
 };
