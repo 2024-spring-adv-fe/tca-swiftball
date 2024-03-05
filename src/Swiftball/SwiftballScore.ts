@@ -33,8 +33,8 @@ export const getLeaderboard = (ballot: SwiftballBallot[]): LeaderboardEntry[] =>
     );
 
     return leaderboard.sort((a, b) => {
-        if (b.overall_accuracy !== a.overall_accuracy) {
-            return b.overall_accuracy - a.overall_accuracy;
+        if (b.accuracies.overall_accuracy !== a.accuracies.overall_accuracy) {
+            return b.accuracies.overall_accuracy - a.accuracies.overall_accuracy;
         } else if (b.ballots !== a.ballots) {
             return b.ballots - a.ballots;
         } else {
@@ -66,17 +66,19 @@ export const getLeaderboardEntryForPlayer = (ballots: SwiftballBallot[], player:
     return {
         player: player,
         ballots: ballotsPlayed,
-        overall_accuracy: overallAccuracy,
-        lover_accuracy: loverAccuracy,
-        fearless_accuracy: fearlessAccuracy,
-        evermore_accuracy: evermoreAccuracy,
-        reputation_accuracy: reputationAccuracy,
-        speak_now_accuracy: speakNowAccuracy,
-        red_accuracy: redAccuracy,
-        folklore_accuracy: folkloreAccuracy,
-        nineteen_eighty_nine_accuracy: nineteenEightyNineAccuracy,
-        surprise_accuracy: surpriseAccuracy,
-        midnights_accuracy: midnightsAccuracy,
+        accuracies: {
+            overall_accuracy: overallAccuracy,
+            lover_accuracy: loverAccuracy,
+            fearless_accuracy: fearlessAccuracy,
+            evermore_accuracy: evermoreAccuracy,
+            reputation_accuracy: reputationAccuracy,
+            speak_now_accuracy: speakNowAccuracy,
+            red_accuracy: redAccuracy,
+            folklore_accuracy: folkloreAccuracy,
+            nineteen_eighty_nine_accuracy: nineteenEightyNineAccuracy,
+            surprise_accuracy: surpriseAccuracy,
+            midnights_accuracy: midnightsAccuracy,
+        }
     };
 };
 

@@ -190,9 +190,7 @@ export type SwiftballBallot = {
     ballot_version: BallotVersion;
 };
 
-export type LeaderboardEntry = {
-    player: string;
-    ballots: number;
+type SwiftballAccuracies = {
     overall_accuracy: number;
     lover_accuracy: number;
     fearless_accuracy: number;
@@ -204,4 +202,10 @@ export type LeaderboardEntry = {
     nineteen_eighty_nine_accuracy: number;
     surprise_accuracy: number;
     midnights_accuracy: number;
+};
+
+export type LeaderboardEntry = {
+    player: string;
+    ballots: number;
+    accuracies: SwiftballAccuracies;
 };

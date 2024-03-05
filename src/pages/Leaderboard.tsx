@@ -53,34 +53,34 @@ export const Leaderboard: FC<LeaderboardProps> = ({ leaderboardData, setTitle })
                                            {b.ballots}
                                        </td>
                                        <td>
-                                           {b.overall_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.overall_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.lover_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.lover_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.fearless_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.fearless_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.evermore_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.evermore_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.reputation_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.reputation_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.speak_now_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.speak_now_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.red_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.red_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.folklore_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.folklore_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.nineteen_eighty_nine_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.nineteen_eighty_nine_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                        <td>
-                                           {b.midnights_accuracy.toLocaleString("en", {style: "percent"})}
+                                           {b.accuracies.midnights_accuracy.toLocaleString("en", {style: "percent"})}
                                        </td>
                                    </tr>
                                ))
