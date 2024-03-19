@@ -278,6 +278,7 @@ enum BallotVersion {
 }
 
 export type SwiftballBallot = {
+    title: string;
     player: string;
     guesses: Swiftball;
     answers: Swiftball;
